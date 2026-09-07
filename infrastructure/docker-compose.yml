@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ../backend
+    container_name: automation_backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - env.example
+    depends_on:
+      - db
+
+  frontend:
+    build: ../frontend
+    container_name: automation_frontend
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:15
+    container_name: automation_db
+    environment:
+      POSTGRES_USER: automation
+      POSTGRES_PASSWORD: automation
+      POSTGRES_DB: automation
+    ports:
+      - "5432:5432"
