@@ -1,7 +1,7 @@
-fastapi
-uvicorn
-sqlalchemy
-psycopg2-binary
-python-dotenv
-requests
-
+# Pinned to compatible releases so image builds are reproducible.
+fastapi~=0.141.1
+uvicorn~=0.52.4
+sqlalchemy~=2.0.52
+psycopg2-binary~=2.9.13
+python-dotenv~=1.2.3
+requests~=2.34.2

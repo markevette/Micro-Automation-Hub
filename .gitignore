@@ -179,3 +179,20 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Node / frontend
+#  The frontend has its own .gitignore, but these are repeated here so a stray
+#  install outside frontend/ can never be committed.
+node_modules/
+build/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# Local environment files (env.example is the tracked template)
+.env
+.env.local
+.env.*.local

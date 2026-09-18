@@ -1,0 +1,20 @@
+# Dependencies are installed inside the image from package-lock.json, so the
+# host copy must never enter the build context (it is large and platform-specific).
+node_modules
+build
+coverage
+
+# nginx.conf is deliberately NOT ignored: the runtime stage copies it in.
+.git
+.gitignore
+Dockerfile
+.dockerignore
+README.md
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.env
+.env.local
+.env.*.local
